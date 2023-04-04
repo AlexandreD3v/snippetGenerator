@@ -1,4 +1,7 @@
-"/**", 
+"nSearchCreate": { 
+"prefix": "teste", 
+"body": [ 
+ "/**", 
 " * @copyright © 2022, Oracle and/or its affiliates. All rights reserved.", 
 " *", 
 " * @NApiVersion 2.x", 
@@ -31,3 +34,5 @@
 "export function localizationContextEnter(context: any): void {}", 
 "", 
 "export function localizationContextExit(context: any): void {}", 
+], 
+"description": "teste", 
