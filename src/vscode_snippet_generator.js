@@ -26,7 +26,8 @@ fs.readdir(config.input, (e, f) => {
             if (config.buildFullSnippetFile && f.indexOf(file)+1 == f.length) writeS.write(`} \n`);
             console.log("Done!")
         })
-    })
+        return;
+    });
 })
 
 function createWriteStreamObj(fileName) {
