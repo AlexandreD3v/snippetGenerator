@@ -1,6 +1,6 @@
 {
     "input":"../in/",
     "output":"../out/",
-    "fileInputExtension":".ts",
+    "fileInputExtension":".js",
     "buildFullSnippetFile":true    
 }
