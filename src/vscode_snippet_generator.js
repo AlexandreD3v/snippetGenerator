@@ -5,7 +5,7 @@ const fs = require('fs'),
 fs.readdir(config.input, (e, f) => {
     if (e) throw e;
 
-    var writeS = "";
+    var writeS = "", nScript = 1;
     if (config.buildFullSnippetFile) {
         writeS = config.buildFullSnippetFile ? createWriteStreamObj("snnipets.json") : '';
         writeS.write(`{ \n`);
@@ -23,8 +23,9 @@ fs.readdir(config.input, (e, f) => {
             writeS.write(`\"body\": [ \n ${lines.join("")}], \n`);
             writeS.write(`\"description\": \"${file.replace(/\.js$/, '')}\", \n`);
             writeS.write(`}, \n`);
-            if (config.buildFullSnippetFile && f.indexOf(file)+1 == f.length) writeS.write(`} \n`);
-            console.log("Done!")
+            if (config.buildFullSnippetFile && f.indexOf(file) + 1 == f.length) writeS.write(`} \n`);
+            console.log("Done " + file + "! " + nScript + "\n");
+            nScript++;
         })
     })
 })
